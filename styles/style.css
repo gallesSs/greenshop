@@ -42,10 +42,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
 }
 
@@ -61,4 +62,82 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* =========== DEFAULT  ============ */
+
+/* =========== HEADER  ============ */
+
+.header .container .header-nav .logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo_svg {
+  fill: #46a358;
+}
+
+.logo_text {
+  color: #46a358;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.header .container {
+  padding-bottom: 17px;
+  margin-top: 25px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-menu-item-link {
+  color: #3d3d3d;
+  font-size: 16px;
+  font-weight: 400;
+  transition: font-weight 250ms, transform 250ms;
+  transform: scale(0, 1);
+}
+
+.nav-menu-item {
+  position: relative;
+}
+
+.nav-menu-item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 0px solid red;
+  bottom: -25px;
+  opacity: 1;
+  transition: border-bottom 0.35s, transform 0.35s;
+  transform: scale(1, 0);
+}
+
+.nav-menu-item-link:hover,
+.nav-menu-item-link:focus {
+  font-weight: 600;
+  transform: scale(1);
+}
+
+.nav-menu-item:hover:after,
+.nav-menu-item:focus:after {
+  border-bottom: 3px solid red;
+  transform: scale(1);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 230px;
 }
